@@ -1,0 +1,43 @@
+<article class="container">
+  <div class="row">
+    <div class="col-6">
+      <ul>
+        <li>
+          <h2>{{ post.title }}</h2>
+        </li>
+        <li>
+          Автор: {{ post.author }}
+        </li>
+        <li>
+          Дата публикации: {{ post.pub_date|date:"d E Y" }}
+        </li>
+        {% if post.group %}
+        <li>
+          Группа: <a href="{% url 'posts:group' post.group.slug %}">{{ post.group }}</a>
+        </li>
+        {% endif %}
+      </ul>
+      <p>{{ post.text }}</p>
+    </div>
+    <div class="col-6">
+      {% if post.image %}
+      <a href="{{ post.image.url }}" target="_blank">
+        <img class="border-3 rounded img-fluid img-thumbnail mb-2 mx-auto d-block" src="{{ post.image.url }}" style="max-width: 200px;">
+      </a>
+      {% endif %}
+    </div>
+  </div>
+  {% if user == post.author %}
+    <div class="mb-2">
+      <a class="btn btn-sm text-muted" href="{% url 'posts:edit' post.id %}" role="button">
+        Отредактировать публикацию
+      </a>
+      <a class="btn btn-sm text-muted" href="{% url 'posts:delete' post.id %}" role="button">
+        Удалить публикацию
+      </a>
+    </div>
+  {% endif %}
+</article>
+{% if user.is_authenticated %}
+  {% include "includes/like.html" %}
+{% endif %}

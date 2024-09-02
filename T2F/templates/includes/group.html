@@ -1,0 +1,8 @@
+<article>
+    <ul>
+      <li>
+        Название группы: <a href={% url 'posts:group' group.slug %}>{{ group.title }}<a/>
+      </li>
+    </ul>
+    <p>{{ group.description }}</p>
+  </article>

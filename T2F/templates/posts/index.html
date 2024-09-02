@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} 
+Последние обновления на сайте 
+{% endblock title %}
+{% block content %}
+    {% for post in page_obj %}
+      {% include 'includes/post.html' %}
+      <a href="{% url 'posts:detail' post.pk %}">подробнее</a>
+      {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    {% include "includes/paginator.html" %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} 
+Группы
+{% endblock title %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    {% for group in page_obj %}
+        {% include 'includes/group.html' %}
+      {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    {% include "includes/paginator.html" %}
+{% endblock %}
