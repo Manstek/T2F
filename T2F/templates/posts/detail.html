@@ -4,5 +4,10 @@
 {% endblock title %}
 {% block content %}
   {% include "includes/post.html" %}
+  {% if "/post/" in request.path %}
+      {% if user.is_authenticated %}
+        {% include "includes/like.html" %}
+      {% endif %}
+    {% endif %}
   {% include "includes/comments.html" %}
 {% endblock %}

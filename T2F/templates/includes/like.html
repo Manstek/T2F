@@ -1,19 +1,17 @@
 {% if user_liked_post %}
-            <!-- Кнопка для удаления лайка -->
-            <form action="{% url 'posts:unlike' post.id %}" method="post" class="d-inline">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-outline-danger d-inline-flex align-items-center">
-                    Убрать лайк <span class="ms-1">({{ post.likes.count }})</span>
-                </button>
-            </form>
-        {% else %}
-            <!-- Кнопка для добавления лайка -->
-            <form action="{% url 'posts:like' post.id %}" method="post" class="d-inline">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-outline-primary d-inline-flex align-items-center">
-                    Лайк <span class="ms-1">({{ post.likes.count }})</span>
-                </button>
-            </form>
-        {% endif %}
-
-</div>
+  <!-- Кнопка для удаления лайка -->
+  <form action="{% url 'posts:unlike' post.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-sm text-muted">
+      Убрать лайк ({{ post.likes.count }})
+    </button>
+  </form>
+{% else %}
+  <!-- Кнопка для добавления лайка -->
+  <form action="{% url 'posts:like' post.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-sm text-muted">
+      Лайк ({{ post.likes.count }})
+    </button>
+  </form>
+{% endif %}
