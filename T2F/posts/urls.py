@@ -45,5 +45,4 @@ urlpatterns = [
      path('posts/<int:post_id>/unlike/',
           views.LikeDeleteView.as_view(),
           name='unlike'),
-
 ]
