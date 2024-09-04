@@ -1,0 +1,256 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "ivan_petrov",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "ivan.petrov@example.com",
+            "first_name": "Иван",
+            "last_name": "Петров"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "maria_ivanova",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "maria.ivanova@example.com",
+            "first_name": "Мария",
+            "last_name": "Иванова"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "nikolai_smirnov",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "nikolai.smirnov@example.com",
+            "first_name": "Николай",
+            "last_name": "Смирнов"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "elena_orlova",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "elena.orlova@example.com",
+            "first_name": "Елена",
+            "last_name": "Орлова"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "dmitry_sokolov",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "dmitry.sokolov@example.com",
+            "first_name": "Дмитрий",
+            "last_name": "Соколов"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "username": "svetlana_kuznetsova",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "svetlana.kuznetsova@example.com",
+            "first_name": "Светлана",
+            "last_name": "Кузнецова"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "username": "andrey_lebedev",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "andrey.lebedev@example.com",
+            "first_name": "Андрей",
+            "last_name": "Лебедев"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "username": "olga_kovaleva",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "olga.kovaleva@example.com",
+            "first_name": "Ольга",
+            "last_name": "Ковалева"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "username": "sergei_morozov",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "sergei.morozov@example.com",
+            "first_name": "Сергей",
+            "last_name": "Морозов"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "username": "irina_popova",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "irina.popova@example.com",
+            "first_name": "Ирина",
+            "last_name": "Попова"
+        }
+    },
+    {
+        "model": "posts.group",
+        "pk": 1,
+        "fields": {
+            "title": "Python Developers",
+            "slug": "python-developers",
+            "description": "Группа для энтузиастов Python."
+        }
+    },
+    {
+        "model": "posts.group",
+        "pk": 2,
+        "fields": {
+            "title": "Web Development",
+            "slug": "web-development",
+            "description": "Группа для веб-разработчиков."
+        }
+    },
+    {
+        "model": "posts.group",
+        "pk": 3,
+        "fields": {
+            "title": "Machine Learning",
+            "slug": "machine-learning",
+            "description": "Группа для практикующих машинное обучение."
+        }
+    },
+    {
+        "model": "posts.group",
+        "pk": 4,
+        "fields": {
+            "title": "Django Developers",
+            "slug": "django-developers",
+            "description": "Группа для разработчиков Django."
+        }
+    },
+    {
+        "model": "posts.group",
+        "pk": 5,
+        "fields": {
+            "title": "Data Science",
+            "slug": "data-science",
+            "description": "Группа для энтузиастов Data Science."
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 1,
+        "fields": {
+            "title": "Python Basics",
+            "text": "Изучение основ Python...",
+            "pub_date": "2024-09-01T10:00:00Z",
+            "author": 1,
+            "group": 1
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 2,
+        "fields": {
+            "title": "Advanced Django",
+            "text": "Продвинутые темы Django...",
+            "pub_date": "2024-09-02T11:30:00Z",
+            "author": 2,
+            "group": 4
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 3,
+        "fields": {
+            "title": "Data Science in Python",
+            "text": "Использование Python для Data Science...",
+            "pub_date": "2024-09-03T13:00:00Z",
+            "author": 3,
+            "group": 5
+        }
+    },
+    {
+        "model": "posts.like",
+        "pk": 1,
+        "fields": {
+            "post": 1,
+            "author": 2
+        }
+    },
+    {
+        "model": "posts.like",
+        "pk": 2,
+        "fields": {
+            "post": 1,
+            "author": 3
+        }
+    },
+    {
+        "model": "posts.comment",
+        "pk": 1,
+        "fields": {
+            "post": 1,
+            "author": 3,
+            "text": "Очень интересная статья! Спасибо за полезную информацию.",
+            "pub_date": "2024-09-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "posts.comment",
+        "pk": 2,
+        "fields": {
+            "post": 1,
+            "author": 4,
+            "text": "Мне кажется, стоит больше уделить внимание типам данных.",
+            "pub_date": "2024-09-01T13:00:00Z"
+        }
+    },
+    {
+        "model": "posts.comment",
+        "pk": 3,
+        "fields": {
+            "post": 2,
+            "author": 5,
+            "text": "Спасибо за материал по Django!",
+            "pub_date": "2024-09-02T15:00:00Z"
+        }
+    },
+    {
+        "model": "posts.comment",
+        "pk": 4,
+        "fields": {
+            "post": 2,
+            "author": 6,
+            "text": "Отличное объяснение сложных концепций.",
+            "pub_date": "2024-09-02T16:30:00Z"
+        }
+    },
+    {
+        "model": "posts.comment",
+        "pk": 5,
+        "fields": {
+            "post": 3,
+            "author": 7,
+            "text": "Я бы добавил больше примеров по pandas.",
+            "pub_date": "2024-09-03T17:00:00Z"
+        }
+    }
+]
